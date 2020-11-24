@@ -1,0 +1,159 @@
+@use '../../variables' as v;
+@media (pointer: fine) {
+  .circleWrapper:hover {
+    cursor: pointer;
+    .circle1,
+    .circle2 {
+      transition: all 350ms;
+    }
+    .circle1 {
+      stroke-width: 12;
+    }
+    // .circle2 {
+    // }
+  }
+}
+@media only screen and (max-width: v.$mobileBreakpoint) {
+  #sliderWrapper {
+    grid-column: 2;
+    // grid-row: 2;
+    max-width: 100%;
+    .wrapper {
+      transition: all 800ms;
+      position: relative;
+
+      .imgBannerBtnWrapper {
+        z-index: 6;
+        position: absolute;
+        top: 60%;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        .imgBannerBtn {
+          padding: 5px 15px 5px 15px;
+
+          color: coral;
+          background-color: v.$mainButtonColor;
+        }
+      }
+    }
+
+    .item {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .itemEffect {
+      animation-name: slider;
+      animation-duration: 2s;
+    }
+    #dotWrapper {
+      display: flex;
+
+      justify-content: center;
+
+      position: relative;
+      top: -10%;
+      .circleWrapper {
+        width: 20px;
+        margin: 0 1% 0 1%;
+
+        height: 20px;
+        z-index: 5;
+
+        .circle1,
+        .circle2 {
+          transition: all 350ms;
+        }
+        .circle1 {
+          fill: #fcfcfc;
+        }
+        .circle2 {
+          stroke: none;
+        }
+      }
+
+      .circleWrapper:active {
+        cursor: pointer;
+        .circle1,
+        .circle2 {
+          transition: all 350ms;
+        }
+        .circle1 {
+          stroke: #fcfcfc !important;
+        }
+        //.circle2 {
+        //  stroke:#f2f2f2;
+        //  fill:green;
+        //}
+      }
+      .circle1Effect {
+        transition: all 350ms;
+        stroke-width: 12;
+      }
+      .circle2Effect {
+        transition: all 350ms;
+        fill: #fcfcfc;
+      }
+    }
+  }
+
+  @keyframes slider {
+    0% {
+      opacity: 0.1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+//#dotWrapper{
+//  display: flex;
+//  justify-content: center;
+//  position: relative;
+//  top:-10%;
+//  .circleWrapper {
+//    width: 20px;
+//    margin: 0 1% 0 1%;
+//
+//    height: 20px;
+//    z-index: 5;
+//
+//    .circle1,
+//    .circle2 {
+//      transition: all 350ms;
+//      r: 2;
+//
+//    }
+//    .circle2 {
+//      fill:#fcfcfc;
+//
+//    }
+//  }
+//  .circleWrapper:hover {
+//    cursor: pointer;
+//    .circle1,
+//    .circle2 {
+//      transition: all 350ms;
+//
+//    }
+//    .circle1 {
+//      r: 9;
+//    }
+//    .circle2 {
+//      r: 3;
+//    }
+//  }
+//  .circle1Effect{
+//    transition: all 350ms;
+//    r: 9;
+//  }
+//  .circle1Effect{
+//    transition: all 350ms;
+//    fill:#fcfcfc;
+//    r: 3;
+//  }
+//}

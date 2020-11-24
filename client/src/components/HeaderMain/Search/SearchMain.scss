@@ -1,0 +1,22 @@
+@use '../../../variables' as v;
+@media only screen and (max-width: v.$mobileBreakpoint) {
+#searchSVG{
+  width: v.$headerIconSize;
+  height: v.$headerIconSize;
+
+  border-radius: 30%;
+  background-position: center;
+  transition: background 0.8s;
+
+}
+  #searchSVG:hover{
+    background: v.$mobileBannerBackground radial-gradient(circle, transparent 1%, v.$mobileBannerBackground 1%) center/15000%;
+    cursor: pointer;
+
+  }
+  #searchSVG:active{
+    background-color: v.$headIconClickMobile;
+    background-size: 100%;
+    transition: background 0s;
+  }
+}

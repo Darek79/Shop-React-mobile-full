@@ -1,0 +1,64 @@
+@use '../../../variables' as v;
+@media only screen and (max-width: v.$mobileBreakpoint) {
+  .hamburger5 {
+    width: v.$headerIconSize;
+    height: v.$headerIconSize;
+    padding: 5px;
+    justify-self: center;
+    align-self: center;
+
+    .lin1,
+    .lin2,
+    .lin3,
+    .lin4 {
+      transition: all 350ms;
+      transform-origin: 50% 50%;
+    }
+  }
+  .hamburger5:hover {
+    cursor: pointer;
+  }
+
+  .hamburger5moveAway {
+    width: v.$headerIconSize;
+    height: v.$headerIconSize;
+    padding: 5px;
+    justify-self: center;
+    align-self: center;
+
+    .lin1,
+    .lin2,
+    .lin3,
+    .lin4 {
+      transition: all 350ms;
+      transform-origin: 50% 50%;
+    }
+
+    .lin1 {
+      transform: translatey(-100px);
+      opacity: 0;
+    }
+
+    .lin2 {
+      // transform:rotate(90deg);
+      transform: translateX(100px);
+      opacity: 0;
+    }
+
+    .lin3 {
+      // transform:rotate(-180deg);
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+
+    .lin4 {
+      transform: translatey(100px);
+      opacity: 0;
+    }
+  }
+}
+@media only screen and (min-width: v.$mobileUpBreakpoint) {
+  .hamburger5 {
+    display: none;
+  }
+}

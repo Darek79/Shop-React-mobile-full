@@ -1,0 +1,23 @@
+@use '../../../variables' as v;
+@media only screen and (max-width: v.$mobileBreakpoint) {
+  .mobileBanner{
+    width: 100vw;
+    height: v.$bannerHeightAndEffect;
+    background-color: v.$mobileBannerBackground;
+    position:absolute;
+    top:v.$bannerHeightAndEffectFadeAway;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 5%;
+  }
+  .bannerOpen{
+    transform: translatey(v.$bannerHeightAndEffect);
+    transition: all 350ms;
+  }
+  .bannerClosed{
+    transform: translatey(v.$bannerHeightAndEffectFadeAway);
+    transition: all 350ms;
+  }
+}

@@ -1,0 +1,57 @@
+@use '../../variables' as v;
+@media only screen and (max-width: v.$mobileBreakpoint) {
+  .genericBanner_basket {
+    grid-row: 2;
+    grid-column: 1/4;
+    width: 100vw;
+    height: auto;
+    background-color: v.$mobileBannerBackground;
+    position: absolute;
+    top: -100vh;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 5%;
+
+    .sizeList_wrapper {
+      position: absolute;
+      height: 30vh;
+      background-color: rgba(215, 211, 193, 0.9);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .basket_Size_list {
+        display: flex;
+        // width: 50px;
+        height: 10vh;
+
+        align-items: center;
+      }
+
+      .basket_Size_list > li {
+        background-color: #f4f3ee;
+        padding: 15px;
+        // height: 40px;
+        width: calc(100vw / 10);
+        border: 1px solid black;
+        text-align: center;
+      }
+
+      .basket_Size_list li:hover {
+        cursor: pointer;
+      }
+      .basket_Size_list li:active {
+        background-color: #e1ded1;
+      }
+    }
+  }
+  .genericOpen_basket {
+    transform: translatey(100vh);
+    transition: all 650ms;
+  }
+  .genericClosed_basket {
+    transform: translatey(-100vh);
+    transition: all 650ms;
+  }
+}

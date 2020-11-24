@@ -1,0 +1,32 @@
+@use '../../../variables' as v;
+@media only screen and (max-width: v.$mobileBreakpoint) {
+  .bannerList {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    width: 100%;
+
+    align-items: center;
+    justify-content: space-between;
+
+    .bannerListItem {
+      padding-top: 2px;
+      width: 80%;
+      text-align: center;
+      font-size: 28px;
+      background-position: center;
+      transition: background 0.8s;
+    }
+    .bannerListItem:hover {
+      background: v.$bannerListItemHover
+        radial-gradient(circle, transparent 1%, v.$bannerListItemHover 1%)
+        center/15000%;
+      cursor: pointer;
+    }
+    .bannerListItem:active {
+      background-color: v.$mobileBannerBackground;
+      background-size: 100%;
+      transition: background 0s;
+    }
+  }
+}

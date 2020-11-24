@@ -1,0 +1,38 @@
+@use './variables' as v;
+@use './partials/_closingX.scss';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  outline: none;
+  text-decoration: none;
+}
+button {
+  box-shadow: none;
+}
+
+@media only screen and (max-width: v.$mobileBreakpoint) {
+  #root {
+    display: grid;
+
+    overflow: hidden;
+    grid-template-columns: 10px calc(100% - 20px) 10px;
+    // grid-template-rows: auto 1fr auto;
+    grid-template-rows: repeat(auto, minmax(1fr, auto));
+    // background-color: #f8f9fa;
+    background-color: #f4f3ee;
+  }
+
+  .test {
+    width: 100px;
+    height: 100px;
+    background-color: coral;
+  }
+  .testDiv {
+    margin-top: 40vh;
+  }
+}

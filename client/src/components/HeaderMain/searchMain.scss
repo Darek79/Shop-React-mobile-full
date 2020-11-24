@@ -1,0 +1,23 @@
+@use '../../variables' as v;
+@media only screen and (max-width: v.$mobileBreakpoint) {
+  .genericBanner_search {
+    width: 100vw;
+    height: 20vh;
+    background-color: v.$mobileBannerBackground;
+    position: absolute;
+    top: -20vh;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 5%;
+  }
+  .genericOpen_search  {
+    transform: translatey(20vh);
+    transition: all 650ms;
+  }
+  .genericClosed_search  {
+    transform: translatey(-20vh);
+    transition: all 650ms;
+  }
+}

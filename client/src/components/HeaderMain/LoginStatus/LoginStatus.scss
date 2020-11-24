@@ -1,0 +1,48 @@
+@use '../../../variables' as v;
+@media only screen and (max-width: v.$mobileBreakpoint) {
+  .loginStatus_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .loginStatus_msg {
+      font-size: 24px;
+    }
+    .loginStatus_msg::before {
+      content: attr(data-name);
+      position: relative;
+      left: -10px;
+      border: 3px solid black;
+      border-radius: 50%;
+      padding: 4px;
+      background-color: black;
+      color: white;
+    }
+    .loginStatus_status {
+      background-color: black;
+      color: white;
+      padding: 5px 10px;
+      border: 2px solid black;
+      font-size: 20px;
+    }
+    .loginStatus_status:active {
+      background-color: white;
+      color: black;
+    }
+    .loginStatus_logoutBtn_wrapper {
+      display: flex;
+      .loginStatus_logoutBtn {
+        margin-top: 10px;
+        margin-right: 10px;
+        padding: 5px 10px;
+        font-size: 20px;
+        border: 2px solid black;
+        color: black;
+      }
+    }
+
+    .loginStatus_logoutBtn:active {
+      background-color: black;
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@use '../../variables' as v;
+@media only screen and (max-width: v.$mobileBreakpoint) {
+  .productProdWrapper {
+    grid-column: 2;
+    width: calc(3 * 330px);
+    height: calc(400px + 30px);
+    overflow: hidden;
+    position: relative;
+
+    .innerProdWrapper {
+      display: grid;
+      grid-template-columns: auto;
+      column-gap: 20px;
+      grid-auto-flow: column;
+      transition: all 350ms ease-in;
+      .prodImg {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+      }
+    }
+    .innerProdWrapper > a {
+      height: 100%;
+      width: 300px;
+    }
+
+    .desc {
+      width: 300px;
+      font-size: 18px;
+      margin-top: 5px;
+      color: blue;
+    }
+    .desc p:last-child {
+      margin-top: 5px;
+      color: red !important;
+    }
+  }
+  .productProdWrapper > p {
+    color: v.$mainFontColor;
+
+    font-size: v.$mainFontSwiperHeading;
+    padding-bottom: 15px;
+  }
+}

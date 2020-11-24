@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Admin-Upload</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+      }
+      #adminForm {
+        position: relative;
+        top: 10%;
+        height: calc(250px + 400px);
+        width: auto;
+        display: flex;
+        flex-direction: column;
+      }
+      .textarea {
+        height: 150px;
+        resize: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      method="POST"
+      action="/admin/productUpload"
+      enctype="multipart/form-data"
+      id="adminForm"
+    >
+      <input
+        type="text"
+        name="productFolder"
+        placeholder="product Folder"
+        required
+      /><br />
+      <input
+        type="text"
+        name="productTitle"
+        placeholder="product title"
+        required
+      /><br />
+      <input
+        type="text"
+        name="productBrand"
+        placeholder="product brand"
+        required
+      /><br />
+      <textarea
+        type="text"
+        class="textarea"
+        name="productDescription"
+        placeholder="product description"
+        required
+      ></textarea
+      ><br />
+      <textarea
+        type="text"
+        class="textarea"
+        name="productDetails"
+        placeholder="product details"
+        required
+      ></textarea
+      ><br />
+      <input
+        type="text"
+        name="productCategory"
+        placeholder="product category"
+        required
+      /><br />
+      <input
+        type="text"
+        name="subCategory"
+        placeholder="sub category"
+        required
+      /><br />
+      <input
+        type="text"
+        name="artCategory"
+        placeholder="article category"
+        required
+      /><br />
+      <input
+        type="number"
+        name="productPrice"
+        placeholder="product price"
+        required
+        step=".01"
+      /><br />
+
+      <input type="file" name="photos" accept="image/*" multiple /><br />
+      <button type="submit">submit</button>
+    </form>
+  </body>
+</html>

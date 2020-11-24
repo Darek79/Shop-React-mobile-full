@@ -1,0 +1,57 @@
+@use '../../variables' as v;
+@media only screen and (max-width: v.$mobileBreakpoint) {
+  .imgBannerSkeletonWrapper {
+    grid-column: 2;
+    position: relative;
+    width: 100%;
+    background-color: v.$skeletonOuter;
+    display: flex;
+    margin: v.$mobileDefaultMargin;
+    .imgBannerSkeletonInside {
+      width: 80%;
+      height: 80%;
+      background-color: v.$skeletonInner;
+      margin: auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+
+      .imgBannerSkeletonInsideDot {
+        background-color: v.$skeletonOuter;
+        position: relative;
+        bottom: -90%;
+        width: 20px;
+        height: 20px;
+        margin: 0 5px 0 5px;
+        border-radius: 50%;
+      }
+    }
+  }
+  .imgBannerSkeletonWrapper::before {
+    content: '';
+    height: 100%;
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: -100%;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      #f8f9fa 50%,
+      transparent 100%
+    );
+
+    animation: grad 1.5s infinite ease-in;
+  }
+  @keyframes grad {
+    0% {
+      left: -100%;
+    }
+    50% {
+      left: 50%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+}

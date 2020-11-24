@@ -1,0 +1,33 @@
+//@use '../../variables' as v;
+//@media only screen and (max-width: v.$mobileBreakpoint) {
+//
+//  .bannerX {
+//    width: 15px;
+//    height: 15px;
+//    margin-left: auto;
+//
+//  }
+//  .xline1,.xline2,{
+//    transition: all 350ms;
+//    transform-origin: 50% 50%;
+//  }
+//
+//  .bannerX:hover{
+//    .xline1,.xline2{
+//      stroke-width: 5;
+//        stroke: v.$bannerListItemHover;
+//      transform: rotate(90deg);
+//      cursor: pointer;
+//    }
+//  }
+//  .bannerX:active {
+//    .xline1,.xline2 {
+//      stroke: v.$bannerListItemHover;
+//      stroke-width: 7;
+//
+//      transition: all 0ms;
+//      transform-origin: 50% 50%;
+//
+//    }
+//  }
+//};

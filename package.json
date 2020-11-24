@@ -1,0 +1,36 @@
+{
+  "name": "shopreact",
+  "version": "1.0.0",
+  "description": "webserver",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js --delay 2000ms",
+    "client": "npm run dev --prefix client",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "debug": "ndb nodemon . --inspect"
+  },
+  "author": "Dariusz Kloda",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.28.0",
+    "mongodb": "^3.6.1",
+    "mongoose": "^5.10.4",
+    "node-sass": "^4.14.1",
+    "nodemailer": "^6.4.11",
+    "react-redux": "^7.2.1",
+    "stripe": "^8.125.0",
+    "uuid": "^8.3.0",
+    "validator": "^13.1.1"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^5.7.36",
+    "multer": "^1.4.2",
+    "prettier": "2.1.1"
+  }
+}

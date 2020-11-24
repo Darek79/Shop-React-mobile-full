@@ -1,0 +1,104 @@
+@use '../../variables' as v;
+@media only screen and (max-width: v.$mobileBreakpoint) {
+  .payment_main {
+    grid-column: 2;
+    height: 95vh;
+    .payment_paytxt {
+      padding: 5px 0;
+      font-size: 24px;
+      text-align: center;
+    }
+    .payment_choose {
+      display: flex;
+      font-size: 20px;
+      justify-content: center;
+    }
+    .payment_choose_method {
+      margin: 30px 0 30px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .paypal_module {
+        width: 90%;
+        height: auto;
+      }
+    }
+    .payment_paypal_logo {
+      width: 80%;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+    .payment_stripe_logo {
+      width: 80%;
+      height: 50px;
+    }
+    .payment_hide {
+      display: none;
+    }
+    .payment_choose > p {
+      padding: 5px;
+      border: 2px solid transparent;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .payment_reset {
+      grid-column: 1/4;
+      border: 2px solid black;
+      border-radius: 5vh;
+      background-color: black;
+      color: white;
+      font-size: 20px;
+      padding: 5px 0;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    #payment-form {
+      width: 100%;
+      align-self: center;
+      box-shadow: 0px 0px 0px 0.5px rgba(50, 50, 93, 0.1),
+        0px 2px 5px 0px rgba(50, 50, 93, 0.1),
+        0px 1px 1.5px 0px rgba(0, 0, 0, 0.07);
+      border-radius: 7px;
+      padding: 40px;
+
+      .result-message {
+        line-height: 22px;
+        font-size: 16px;
+      }
+
+      .result-message a {
+        color: rgb(89, 111, 214);
+        font-weight: 600;
+        text-decoration: none;
+      }
+    }
+
+    #payment-form > button {
+      background: #5469d4;
+      font-family: Arial, sans-serif;
+      color: #ffffff;
+      border-radius: 0 0 4px 4px;
+      border: 0;
+      padding: 12px 16px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      display: block;
+      transition: all 0.2s ease;
+      box-shadow: 0px 4px 5.5px 0px rgba(0, 0, 0, 0.07);
+      width: 100%;
+    }
+    #payment-form button:hover {
+      filter: contrast(115%);
+    }
+    #payment-form button:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@use '../../variables' as v;
+@media only screen and (max-width: v.$mobileBreakpoint) {
+  .headerMain {
+    width: 100%;
+    max-height: 100%;
+    grid-column: 1/4;
+    background-color: v.$headBackground;
+    display: grid;
+    grid-template-columns: 10% auto 30%;
+    z-index: 10;
+  }
+  #logoMain {
+    grid-column: 2;
+    width: 100;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+  }
+  .actionButtons {
+    grid-column: 3;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+}

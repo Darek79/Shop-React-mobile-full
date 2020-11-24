@@ -1,0 +1,71 @@
+.login_con_wrapper {
+  width: 100vw;
+  max-height: 100%;
+
+  background-color: black;
+
+  .login_desc {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+
+    .login_desc_txt {
+      color: white;
+      font-size: 20px;
+    }
+    .login_desc_arrow {
+      width: 20px;
+      height: 20px;
+    }
+    .login_isOpen {
+      position: relative;
+      transform: rotate(180deg);
+    }
+  }
+  .login_form {
+    padding: 10px 15px;
+    height: auto;
+    .login_form_label {
+      width: 100%;
+      color: white;
+      font-size: 20px;
+    }
+    .login_form_input_top {
+      padding: 5px 0 10px 0;
+    }
+    .login_form_input_adj {
+      padding: 10px 0;
+    }
+    .login_form_input {
+      width: 100%;
+      font-size: 20px;
+    }
+    .login_form_submitWrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: first baseline;
+      .login_form_submitBtn {
+        width: 25%;
+        padding: 5px 0 10px 0;
+        font-size: 20px;
+        border-radius: 5vh;
+        border: none;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        background-color: white;
+      }
+      .login_form_forgot {
+        color: grey;
+      }
+    }
+
+    .login_err_p {
+      font-size: 18px;
+      width: 100%;
+      text-align: center;
+      color: red;
+      border: 2px solid red;
+    }
+  }
+}

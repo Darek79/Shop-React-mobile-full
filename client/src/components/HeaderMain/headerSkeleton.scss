@@ -1,0 +1,59 @@
+@use '../../variables' as v;
+@media only screen and (max-width: v.$mobileBreakpoint) {
+  .sheaderMain {
+    grid-column: 2;
+    width: 100%;
+    grid-row: 1;
+    background-color: v.$headBackground;
+    display: grid;
+    grid-template-columns: 10% auto 30%;
+    z-index: 2;
+    padding: 5px;
+
+    .shamburger5 {
+      justify-self: center;
+      align-self: center;
+      width: v.$headerIconSize;
+      height: v.$headerIconSize;
+    }
+    .sactionButtons {
+      grid-column: 3;
+      align-self: center;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      height: v.$headerIconSize;
+    }
+    .sactionItems {
+      width: v.$headerIconSize;
+      height: 100%;
+    }
+  }
+  .sheaderMain::before {
+    content: '';
+    height: v.$headerIconSize;
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: -100%;
+    background: linear-gradient(
+      to right,
+      transparent 0%,
+      #f8f9fa 50%,
+      transparent 100%
+    );
+
+    animation: grad 1.5s infinite ease-in;
+  }
+  @keyframes grad {
+    0% {
+      left: -100%;
+    }
+    50% {
+      left: 50%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+}
